@@ -26,6 +26,7 @@
                     <th>Data Nascimento</th>
                     <th>Sexo</th>
                     <th></th>
+                    <th></th>
                 </tr>
                 @foreach($clientes as $cliente)
                 <tr>
@@ -33,6 +34,7 @@
                     <td>{{$cliente->data_nascimento}}</td>
                     <td>{{$cliente->sexo}}</td>
                     <td><a href="{{ route('cliente.show', $cliente->id) }}"><button class="btn btn-primary">Editar</button></a></td>
+                    <td><a href="{{ url('/destroy', $cliente->id) }}"><button class="btn btn-danger">Excluir</button></a></td>
                 </tr>
                 @endforeach
             </table>

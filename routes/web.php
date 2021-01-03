@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 Route::get('/', [ClienteController::class, 'index']);
 Route::get('/new', [ClienteController::class, 'create']);
+Route::get('/destroy/{id}', [ClienteController::class, 'destroy']);
 
 /*
 Route::get('/new/{id?}', function () {

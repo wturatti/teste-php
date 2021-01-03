@@ -129,6 +129,9 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cliente = Cliente::find($id);
+        $cliente->delete();
+
+        return redirect('/')->with('success', 'Cadastro excluído com sucesso!');
     }
 }
